@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useMemo } from 'react';
 import StateContext from '../StateContext';
 import { useRouter } from 'next/router'
 import Page from '../Page'
