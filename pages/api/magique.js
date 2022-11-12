@@ -5,7 +5,6 @@ import Replicate from 'replicate-js';
 const NEXT_PUBLIC_DEEPL_TOKEN = process.env.NEXT_PUBLIC_DEEPL_TOKEN || ''
 const NEXT_PUBLIC_REPICLATE_TOKEN = process.env.NEXT_PUBLIC_REPICLATE_TOKEN || ''
 const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || ''
-const NEXT_PUBLIC_BACKEND_PORT = process.env.NEXT_PUBLIC_BACKEND_PORT || 8000
 
 const MODEL_NAME = 'stability-ai/stable-diffusion'
 const height = 512;
@@ -23,7 +22,7 @@ export default function handler(req, res) {
   if (req.method === 'POST') {
     const body = JSON.parse(req.body);
     // Process a POST request
-    console.log(body.text)
+    console.log("body.text", body.text)
 
     translator.translateText(body.text, null, 'en-US').then(({ text }) => {
       replicate.models.get(MODEL_NAME).then((myModel) =>
@@ -36,7 +35,7 @@ export default function handler(req, res) {
           height: height,
           init_image: `${NEXT_PUBLIC_BASE_URL}/city_images/${body.image}`,
         })).then((generatedImage) => {
-          console.log(generatedImage)
+          console.log("generatedImage", generatedImage)
           res.status(200).json({ image: generatedImage })
         }).catch((err) => {
           throw err;

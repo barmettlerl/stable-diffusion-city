@@ -10,6 +10,9 @@ const Result = () => {
 	const data = useMemo(() => getData(), [getData])
 
 	useEffect(() => {
+		if (!data) {
+			return; //TODO: redirect to start page
+		}
 		setLoading(true)
 		fetch('/api/magique', {
 			method: 'POST',
@@ -32,7 +35,7 @@ const Result = () => {
 						<div className='card mt-4'>
 							{data.image ?
 								<div className="card-image">
-									<figure class="image is-4by3">
+									<figure className="image is-4by3">
 										<img src={imagePath} />
 									</figure>
 								</div>

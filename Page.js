@@ -4,7 +4,7 @@ const Page = ({ children }) => {
 		<>
 			<nav className="navbar is-primary" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
-					<a class="navbar-item" href="/">
+					<a className="navbar-item" href="/">
 						<img src="/Logo_Sankt_Partizipation.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" />
 					</a>
 

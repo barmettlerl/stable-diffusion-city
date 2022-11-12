@@ -22,7 +22,7 @@ const Text = () => {
 			<div className="container mt-4">
 
 				<div className='columns mt-4 is-flex is-flex-direction-column'>
-					<div class="column is-half is-offset-one-quarter">
+					<div className="column is-half is-offset-one-quarter">
 						<h1 className="is-size-1 has-text-weight-semibold">Wie möchtest du es verändern?</h1>
 
 						<div className='mt-4'>
@@ -35,7 +35,7 @@ const Text = () => {
 						<div className='card mt-4'>
 							{data.image ?
 								<div className="card-image">
-									<figure class="image is-4by3">
+									<figure className="image is-4by3">
 										<img src={`/city_images/${data.image}`} />
 									</figure>
 								</div>
