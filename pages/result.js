@@ -16,13 +16,13 @@ const Result = () => {
 			router.push('/failure')
 		}
 		setLoading(true)
-		fetch('/api/magique', {
-			method: 'POST',
-			body: JSON.stringify(data),
-		}).then(res => res.json()).then(r => {
-			setImagePath(r.image[0])
-			setLoading(false)
-		})
+		// fetch('/api/magique', {
+		// 	method: 'POST',
+		// 	body: JSON.stringify(data),
+		// }).then(res => res.json()).then(r => {
+		// 	setImagePath(r.image[0])
+		// 	setLoading(false)
+		// })
 	}, [])
 
 
@@ -31,7 +31,14 @@ const Result = () => {
 
 
 			<div className='container mt-4'>
-				{loading || imagePath === "" ? <h1>Loading...</h1> :
+				{loading || imagePath === "" ?
+					<>
+						<h1 className="is-size-2 has-text-weight-semibold">Das Resultat wird berechnet</h1>
+						<div className='is-flex '>
+							<img src='/loading.gif' />
+
+						</div>
+					</> :
 					<div className='columns'>
 						<div className='column is-half is-offset-one-quarter'>
 							<div className="is-flex is-justify-content-center">

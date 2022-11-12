@@ -11,7 +11,9 @@ export default function handler(req, res) {
 
 		let images = []
 
-		fs.readdirSync(path.resolve(DEVELOPMENT ? '/Users/themaimu/privat/st_gall_hack/stable-diffusion-city/public/city_images' : '/city_images/')).forEach(file => {
+		// fs.readdirSync(path.resolve(DEVELOPMENT ? '/Users/themaimu/privat/st_gall_hack/stable-diffusion-city/public/city_images' : './city_images/')).forEach(file => {
+		fs.readdirSync(path.resolve(__dirname, './city_images/')).forEach(file => {
+
 			if (file.endsWith('.jpg')) {
 				images.push(file)
 			}
