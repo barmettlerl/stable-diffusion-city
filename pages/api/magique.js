@@ -5,7 +5,6 @@ import Replicate from 'replicate-js';
 const NEXT_PUBLIC_DEEPL_TOKEN = process.env.NEXT_PUBLIC_DEEPL_TOKEN || ''
 const NEXT_PUBLIC_REPICLATE_TOKEN = process.env.NEXT_PUBLIC_REPICLATE_TOKEN || ''
 const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://st-dream-city.azurewebsites.net'
-const DEVELOPMENT = process.env.DEVELOPMENT || false
 
 
 const MODEL_NAME = 'stability-ai/stable-diffusion'
@@ -35,7 +34,7 @@ export default function handler(req, res) {
           guidance_scale: guidance_scale,
           width: width,
           height: height,
-          init_image: DEVELOPMENT ? "https://www.economiesuisse.ch/sites/default/files/styles/article_/public/sessions/20220221_Fr%C3%BChjahrssession.jpg?itok=r0XAQcnV" : `${NEXT_PUBLIC_BASE_URL}/city_images/${body.image}`,
+          init_image: `${NEXT_PUBLIC_BASE_URL}/city_images/${body.image}`,
         })).then((generatedImage) => {
           console.log("generatedImage", generatedImage)
           res.status(200).json({ image: generatedImage })
