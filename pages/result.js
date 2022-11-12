@@ -33,8 +33,11 @@ const Result = () => {
 			<div className='container mt-4'>
 				{loading || imagePath === "" ?
 					<>
-						<h1 className="is-size-2 has-text-weight-semibold">Das Resultat wird berechnet</h1>
-						<div className='is-flex '>
+						<div className='is-flex is-justify-content-center'>
+							<h1 className="is-size-2 has-text-weight-semibold">Das Resultat wird berechnet</h1>
+
+						</div>
+						<div className='is-flex is-justify-content-center'>
 							<img src='/loading.gif' />
 
 						</div>
