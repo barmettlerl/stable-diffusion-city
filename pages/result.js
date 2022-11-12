@@ -34,7 +34,7 @@ const Result = () => {
 				{loading || imagePath === "" ?
 					<>
 						<div className='is-flex is-justify-content-center'>
-							<h1 className="is-size-2 has-text-weight-semibold">Das Resultat wird berechnet</h1>
+							<h1 className="is-size-2 has-text-weight-semibold">Warte, deine Vision wird generiert!</h1>
 
 						</div>
 						<div className='is-flex is-justify-content-center'>

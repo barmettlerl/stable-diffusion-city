@@ -1,7 +1,13 @@
+import Head from 'next/head'
 
 const Page = ({ children }) => {
 	return (
 		<>
+			<Head>
+				<title>Sankt Traum Stadt</title>
+				<meta name="description" content="Stable diffusion generator für die Stadt Sankt Gallen" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<nav className="navbar is-primary" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<a className="navbar-item" href="/">
