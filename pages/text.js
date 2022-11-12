@@ -44,7 +44,6 @@ const Text = () => {
 
 						</div>
 
-
 					</div>
 
 				</div>

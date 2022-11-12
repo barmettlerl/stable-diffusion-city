@@ -4,6 +4,7 @@ import Page from '../Page'
 
 const Result = () => {
 	const [loading, setLoading] = useState(false);
+	const [imagePath, setImagePath] = useState("");
 	const { getData } = useContext(StateContext)
 
 	const data = useMemo(() => getData(), [getData])
@@ -13,7 +14,9 @@ const Result = () => {
 		fetch('/api/magique', {
 			method: 'POST',
 			body: JSON.stringify(data),
-		}).then(res => res.json()).then(data => {
+		}).then(res => res.json()).then(r => {
+			console.log(r)
+			setImagePath(r.image[0])
 			setLoading(false)
 		})
 	}, [data])
@@ -24,13 +27,20 @@ const Result = () => {
 
 
 			<div className='container mt-4'>
-				{loading ? <h1>Loading...</h1> :
+				{loading || imagePath === "" ? <h1>Loading...</h1> :
 					<div>
-						<ul>
-							<li>{data.question}</li>
-							<li>{data.image}</li>
-							<li>{data.text}</li>
-						</ul>
+						<div className='card mt-4'>
+							{data.image ?
+								<div className="card-image">
+									<figure class="image is-4by3">
+										<img src={imagePath} />
+									</figure>
+								</div>
+								: "No image found"
+							}
+
+						</div>
+
 					</div>
 				}
 			</div>

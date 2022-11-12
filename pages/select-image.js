@@ -17,7 +17,7 @@ const SelectImage = () => {
 
 	return (
 		<Page>
-			<div class="container mt-4">
+			<div className="container mt-4">
 				<h1 className="is-size-1 has-text-weight-semibold">Was möchtest du verändern?</h1>
 				<div className="columns is-multiline">
 					{images.map((image, index) =>

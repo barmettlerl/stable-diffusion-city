@@ -16,7 +16,8 @@
     "eslint-config-next": "13.0.3",
     "next": "13.0.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "replicate-js": "github:nicholascelestin/replicate-js"
   },
   "devDependencies": {
     "sass": "^1.56.1"
