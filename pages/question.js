@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import StateContext from '../StateContext';
 import { useRouter } from 'next/router'
 import Page from '../Page'
+import Link from 'next/link'
+
 
 const Question = () => {
 	const { addQuestion } = useContext(StateContext)

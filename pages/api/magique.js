@@ -33,7 +33,8 @@ export default function handler(req, res) {
           guidance_scale: guidance_scale,
           width: width,
           height: height,
-          init_image: `${NEXT_PUBLIC_BASE_URL}/city_images/${body.image}`,
+          // init_image: `${NEXT_PUBLIC_BASE_URL}/city_images/${body.image}`,
+          init_image: "https://st-dream-city.azurewebsites.net/city_images/sample1.jpg"
         })).then((generatedImage) => {
           console.log("generatedImage", generatedImage)
           res.status(200).json({ image: generatedImage })

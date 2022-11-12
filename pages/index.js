@@ -18,7 +18,7 @@ export default function Home() {
           </div>
           <div className="mt-4" >
             <Link href="/select-image">
-              <button className='button is-large is-primary border-two'>Jetzt verändern!</button>
+              <button className='button is-large is-primary border-two'>ST. GALLEN VERÄNDERN!</button>
             </Link>
           </div>
 
