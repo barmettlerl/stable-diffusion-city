@@ -17,7 +17,6 @@ const guidance_scale = 5;
 const translator = new deepl.Translator(NEXT_PUBLIC_DEEPL_TOKEN);
 const replicate = new Replicate({ token: NEXT_PUBLIC_REPICLATE_TOKEN });
 
-
 export default function handler(req, res) {
 
   if (req.method === 'POST') {
