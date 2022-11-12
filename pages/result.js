@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import { useContext, useEffect, useMemo, useState } from 'react';
 import Page from '../Page'
 
+import translation from '../descs.json'
+
 const Result = () => {
 	const [loading, setLoading] = useState(false);
 	const [imagePath, setImagePath] = useState("");
@@ -45,7 +47,7 @@ const Result = () => {
 					<div className='columns'>
 						<div className='column is-half is-offset-one-quarter'>
 							<div className="is-flex is-justify-content-center">
-								<h1 className="is-size-2 has-text-weight-semibold">mit {data.text}</h1>
+								<h1 className="is-size-2 has-text-weight-semibold">{translation[data.image]} mit {data.text}</h1>
 							</div>
 							<div className='card mt-4'>
 								{data.image ?
