@@ -4,7 +4,7 @@ import Replicate from 'replicate-js';
 
 const NEXT_PUBLIC_DEEPL_TOKEN = process.env.NEXT_PUBLIC_DEEPL_TOKEN || ''
 const NEXT_PUBLIC_REPICLATE_TOKEN = process.env.NEXT_PUBLIC_REPICLATE_TOKEN || ''
-const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || ''
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://st-dream-city.azurewebsites.net'
 
 const MODEL_NAME = 'stability-ai/stable-diffusion'
 const height = 512;
