@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useContext, useEffect, useMemo, useState } from 'react';
 import Page from '../Page'
 
-import translation from '../descs.json'
+import translation from './descs.json'
 
 const Result = () => {
 	const [loading, setLoading] = useState(false);
