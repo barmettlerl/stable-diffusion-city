@@ -30,7 +30,7 @@ export default function handler(req, res) {
       replicate.models.get(MODEL_NAME).then((myModel) =>
         myModel.predict({
           prompt: text,
-          prmt_strgth: prmt_strgth,
+          prompt_strength: prmt_strgth,
           num_interference_steps: num_interference_steps,
           guidance_scale: guidance_scale,
           width: width,
