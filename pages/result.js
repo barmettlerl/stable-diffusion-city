@@ -17,6 +17,7 @@ const Result = () => {
 		if (data.image === "" || data.text === "") {
 			router.push('/failure')
 		}
+
 		setLoading(true)
 		fetch('/api/magique', {
 			method: 'POST',
@@ -31,8 +32,9 @@ const Result = () => {
 	return (
 		<Page>
 
-
 			<div className='container mt-4'>
+				<button className="button is-primary is-outlined is-align-self-center" onClick={() => router.push('/text')}>Zurück</button>
+
 				{loading || imagePath === "" ?
 					<>
 						<div className='is-flex is-justify-content-center'>
