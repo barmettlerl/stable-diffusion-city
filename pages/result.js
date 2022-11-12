@@ -12,7 +12,6 @@ const Result = () => {
 	const data = useMemo(() => getData(), [getData])
 
 	useEffect(() => {
-		console.log(data)
 		if (data.image === "" || data.text === "") {
 			router.push('/failure')
 		}
@@ -24,7 +23,7 @@ const Result = () => {
 			setImagePath(r.image[0])
 			setLoading(false)
 		})
-	}, [data, router])
+	}, [])
 
 
 	return (
@@ -35,6 +34,9 @@ const Result = () => {
 				{loading || imagePath === "" ? <h1>Loading...</h1> :
 					<div className='columns'>
 						<div className='column is-half is-offset-one-quarter'>
+							<div className="is-flex is-justify-content-center">
+								<h1 className="is-size-2 has-text-weight-semibold">mit {data.text}</h1>
+							</div>
 							<div className='card mt-4'>
 								{data.image ?
 									<div className="card-image">

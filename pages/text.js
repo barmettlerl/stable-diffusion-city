@@ -20,19 +20,22 @@ const Text = () => {
 	return (
 		<Page>
 			<div className="container mt-4">
+				<button className="button is-primary is-outlined is-align-self-center" onClick={() => router.push('/select-image')}>Zurück</button>
 
-				<div className='columns mt-4 is-flex is-flex-direction-column'>
+				<div className='columns is-flex is-flex-direction-column'>
 					<div className="column is-half is-offset-one-quarter">
-						<h1 className="is-size-1 has-text-weight-semibold">Wie möchtest du es verändern?</h1>
+						<div className="is-flex is-justify-content-center">
+							<h1 className="is-size-2 has-text-weight-semibold">Wie soll es sich verändern?</h1>
+						</div>
 
 						<div className='mt-4'>
 							<input className="input is-large" type="text" placeholder="z.B mehr Bäume auf den Häusern" onChange={(e) => setTextInput(e.target.value)} />
 						</div>
 
-						<div>
-							<button className="button is-primary is-large mt-4 " onClick={submitToServer}>Vorschlag realisieren</button>
+						<div className='is-flex is-justify-content-flex-end'>
+							<button className="button is-primary is-large mt-4 " onClick={submitToServer}>Vorschlag generieren</button>
 						</div>
-						<div className='card mt-4'>
+						<div className='card mt-5'>
 							{data.image ?
 								<div className="card-image">
 									<figure className="image is-4by3">
