@@ -16,13 +16,13 @@ const Result = () => {
 			router.push('/failure')
 		}
 		setLoading(true)
-		// fetch('/api/magique', {
-		// 	method: 'POST',
-		// 	body: JSON.stringify(data),
-		// }).then(res => res.json()).then(r => {
-		// 	setImagePath(r.image[0])
-		// 	setLoading(false)
-		// })
+		fetch('/api/magique', {
+			method: 'POST',
+			body: JSON.stringify(data),
+		}).then(res => res.json()).then(r => {
+			setImagePath(r.image[0])
+			setLoading(false)
+		})
 	}, [])
 
 

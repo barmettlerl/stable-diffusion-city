@@ -52,6 +52,7 @@ const images = [
 	"weiern.jpg"
 ]
 
+console.log(images)
 
 const SelectImage = () => {
 	const { addImage } = useContext(StateContext)
