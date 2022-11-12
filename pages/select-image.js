@@ -3,10 +3,58 @@ import StateContext from '../StateContext';
 import { useRouter } from 'next/router'
 import Page from '../Page'
 
+const images = [
+	"Solituede.jpg",
+	"alter_bhf_platz.jpg",
+	"altstadt_verschneit.jpg",
+	"athletikzentrum.jpg",
+	"athletikzentrum_aussen.jpg",
+	"autobahnkantine.jpg",
+	"bach.jpg",
+	"belly_of_the_biest.jpg",
+	"bhf_eingeschneit.jpg",
+	"falkenburg.jpg",
+	"fuerstenland.jpg",
+	"gemeinden_sg.jpg",
+	"guebsensee_alt.jpg",
+	"gueterbhf_areal.jpg",
+	"handballhotspot.jpg",
+	"holzcheller.jpg",
+	"industrie_sitthurtobel.jpg",
+	"kastanienkantine.jpg",
+	"kornfeldxbleiche.jpg",
+	"lattich.jpg",
+	"mondbasis.jpg",
+	"nacht_posti.jpg",
+	"nomol_frauebadi.jpg",
+	"notkerseggerianerinne.jpg",
+	"openair.jpg",
+	"openair_nacht.jpg",
+	"saeuli.jpg",
+	"sanierung_sob_viadukt.jpg",
+	"sbb_sitterviadukt.jpg",
+	"schoren.jpg",
+	"sitthurtobel.jpg",
+	"skatepark.jpg",
+	"sob_herbstviadukt.jpg",
+	"sob_sitterviadukt.jpg",
+	"st.fiden.jpg",
+	"st.leopard.jpg",
+	"st.otmar.jpg",
+	"st.schlecht_isoliert.jpg",
+	"sw_winkeln.jpg",
+	"teilspange.jpg",
+	"tröcknerturm.jpg",
+	"turmbauzuguellen.jpg",
+	"vadian.jpg",
+	"vor_klimawandel.jpg",
+	"wandernxbleiche.jpg",
+	"weiern.jpg"
+]
+
 
 const SelectImage = () => {
 	const { addImage } = useContext(StateContext)
-	const [images, setImages] = useState([])
 	const router = useRouter()
 
 	const addImageHandler = (image) => {
@@ -14,15 +62,6 @@ const SelectImage = () => {
 		router.push('/text')
 	}
 
-	useEffect(() => {
-		fetch('/api/images')
-			.then(res => res.json())
-			.then(r => {
-				setImages(r)
-			}
-			)
-
-	}, [])
 
 	return (
 		<Page>
