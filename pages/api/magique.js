@@ -10,7 +10,7 @@ const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://st-dre
 const MODEL_NAME = 'stability-ai/stable-diffusion'
 const height = 512;
 const width = 512;
-const prmt_strgth = 0.5;
+const prmt_strgth = 0.6;
 const num_interference_steps = 45;
 const guidance_scale = 5;
 
