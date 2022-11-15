@@ -3,12 +3,20 @@ import StateContext from '../StateContext';
 import { useRouter } from 'next/router'
 import Page from '../Page'
 import translations from './descs.json'
-
+import Masonry from 'react-masonry-css'
 
 
 const SelectImage = () => {
 	const { addImage } = useContext(StateContext)
 	const router = useRouter()
+
+	const breakpointColumnsObj = {
+		default: 5,
+		1100: 4,
+		700: 3,
+		500: 2,
+		300: 1
+	}
 
 	const addImageHandler = (image) => {
 		addImage(image)
@@ -19,29 +27,34 @@ const SelectImage = () => {
 
 	return (
 		<Page>
-			<div className="container mt-4">
+			<div className="page container mt-4">
 				<button className="button is-primary is-outlined is-align-self-center" onClick={() => router.push('/')}>Zurück</button>
 
-				<div className="is-flex is-justify-content-center">
-					<h1 className="is-size-2 has-text-weight-semibold mb-4 ml-6 ">Was möchtest du verändern?</h1>
+				<div className="page__title">
+					<h1>Was möchtest du verändern?</h1>
 				</div>
-				<div className="is-flex is-flex-wrap-wrap">
-					{images.map((image) =>
-						<div style={{ width: "230px" }} key={image}>
-							<div className='card'>
-								<a onClick={() => addImageHandler(image)}>
-									<div className="card-image">
-										<figure className="image is-4by4">
-											<img src={"/city_images/" + image} />							</figure>
-									</div>
-								</a>
+
+				<div className="page__content">
+					<Masonry
+						breakpointCols={breakpointColumnsObj}
+						className="my-masonry-grid"
+						columnClassName="my-masonry-grid_column">
+						{images.map((image) =>
+							<div  key={image}>
+								<div className='card'>
+									<a onClick={() => addImageHandler(image)}>
+										<div className="card-image">
+											<figure className="image is-4by4">
+												<img src={"/city_images/" + image} />							</figure>
+										</div>
+									</a>
+								</div>
+
 							</div>
-
-						</div>
-					)
-					}
+						)
+						}
+					</Masonry>
 				</div>
-
 			</div>
 		</Page>
 	);

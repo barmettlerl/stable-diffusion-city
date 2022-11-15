@@ -24,12 +24,12 @@ const Text = () => {
 
 				<div className='columns is-flex is-flex-direction-column'>
 					<div className="column is-half is-offset-one-quarter">
-						<div className="is-flex is-justify-content-center">
-							<h1 className="is-size-2 has-text-weight-semibold">Wie soll es sich verändern?</h1>
+						<div className="is-flex is-justify-content-center page__title">
+							<h1>Wie soll es sich verändern?</h1>
 						</div>
 
 						<div className='mt-4'>
-							<input className="input is-large" type="text" placeholder="z.B mehr Bäume auf den Häusern" onChange={(e) => setTextInput(e.target.value)} />
+							<input className="input is-large" type="text" placeholder="z.B Gestaltet von Nikki de Saint Phalle" onChange={(e) => setTextInput(e.target.value)} />
 						</div>
 
 						<div className='is-flex is-justify-content-flex-end'>
@@ -38,7 +38,7 @@ const Text = () => {
 						<div className='card mt-5'>
 							{data.image ?
 								<div className="card-image">
-									<figure className="image is-4by3">
+									<figure className="image">
 										<img src={`/city_images/${data.image}`} />
 									</figure>
 								</div>

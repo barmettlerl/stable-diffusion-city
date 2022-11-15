@@ -36,8 +36,8 @@ const Result = () => {
 				<button className="button is-primary is-outlined is-align-self-center" onClick={() => router.push('/text')}>Zurück</button>
 				{loading || imagePath === "" ?
 					<>
-						<div className='is-flex is-justify-content-center'>
-							<h1 className="is-size-2 has-text-weight-semibold">Warte, deine Vision wird generiert!</h1>
+						<div className='is-flex is-justify-content-center page__title'>
+							<h1>Warte, deine Vision wird generiert!</h1>
 
 						</div>
 						<div className='is-flex is-justify-content-center'>
@@ -46,14 +46,14 @@ const Result = () => {
 						</div>
 					</> :
 					<div className='columns'>
+						<div className="is-flex is-justify-content-center page__title">
+							<h1>{translation[data.image]} <br />{data.text}</h1>
+						</div>
 						<div className='column is-half is-offset-one-quarter'>
-							<div className="is-flex is-justify-content-center">
-								<h1 className="is-size-2 has-text-weight-semibold">{translation[data.image]} mit {data.text}</h1>
-							</div>
 							<div className='card mt-4'>
 								{data.image ?
 									<div className="card-image">
-										<figure className="image is-4by3">
+										<figure className="image">
 											<img src={imagePath} />
 										</figure>
 									</div>
