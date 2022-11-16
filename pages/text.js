@@ -2,6 +2,7 @@ import { useContext, useMemo, useState } from 'react';
 import StateContext from '../StateContext';
 import { useRouter } from 'next/router'
 import Page from '../Page'
+import translation from "./descs.json";
 
 const Text = () => {
 	const [textInput, setTextInput] = useState("");
@@ -39,7 +40,7 @@ const Text = () => {
 							{data.image ?
 								<div className="card-image">
 									<figure className="image">
-										<img src={`/city_images/${data.image}`} />
+										<img src={`/city_images/${data.image}`} alt={translation[data.image]} />
 									</figure>
 								</div>
 								: "No image found"

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import Page from '../Page'
 import translations from './descs.json'
 import Masonry from 'react-masonry-css'
+import translation from "./descs.json";
 
 
 const SelectImage = () => {
@@ -45,7 +46,8 @@ const SelectImage = () => {
 									<a onClick={() => addImageHandler(image)}>
 										<div className="card-image">
 											<figure className="image is-4by4">
-												<img src={"/city_images/" + image} />							</figure>
+												<img src={"/city_images/" + image} loading='lazy' alt={translation[image]} />
+											</figure>
 										</div>
 									</a>
 								</div>
