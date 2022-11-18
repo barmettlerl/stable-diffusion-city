@@ -12,7 +12,7 @@ const Page = ({ children }) => {
 			<nav className="navbar is-primary is-flex is-justify-content-center" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<a className="navbar-item" href="/">
-						<img src="/Logo_Sankt_Partizipation.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" />
+						<img src="/Logo_Sankt_Partizipation.png" alt="Sankt Traumstadt" />
 					</a>
 				</div>
 			</nav>
@@ -21,10 +21,11 @@ const Page = ({ children }) => {
 			</div>
 			<footer className="footer">
 				<div className="content">
-					<div className="footer__logo">
-						<p className="footer__logo-text">
-							<strong>by <a href="https://www.originate.ch" target="_blank" title="originate GmbH">originate GmbH</a></strong>
-						</p>
+					<div className="footer__logo originate-logo">
+							<a href="https://www.originate.ch" target="_blank" title="originate GmbH">
+								<img className='originate-logo__ameise' src="/ameise_black.svg" alt="Logo originate" />
+								<img className='originate-logo__text' src="/originate_schriftzug_black.svg" alt="originate Schriftzug" />
+							</a>
 					</div>
 					<div className="footer__nav"><Link href="/imprint">Impressum</Link></div>
 				</div>
