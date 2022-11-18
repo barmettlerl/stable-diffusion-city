@@ -7,14 +7,14 @@ export default function Home() {
     <>
       <div className={`bg-img ${styles.container}`}>
         <Head>
-          <title>Sankt Traum Stadt</title>
+          <title>Sankt Traumstadt</title>
           <meta name="description" content="Stable diffusion generator für die Stadt Sankt Gallen" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <main className={styles.main}>
           <div className='is-flex is-flex-direction-row'>
-            <img src="/Logo_Sankt_Partizipation.png" width="200px" />
+            <img src="/Logo_Sankt_Partizipation.png" width="200" alt="Sankt Traumstadt" />
           </div>
           <div className="mt-4" >
             <Link href="/select-image">

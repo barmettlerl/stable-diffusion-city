@@ -18,9 +18,10 @@ const Result = () => {
 			<div className='container mt-4'>
 				<div className='columns'>
 					<div className='column is-half is-offset-one-quarter'>
-						<div className=' mt-4'>
-							<h2 className='is-size-2'>Uups ein Fehler ist aufgetretten.</h2>
-
+						<div className=' mt-4 has-text-centered'>
+							<div className='page__title'>
+								<h1>Uups, ein Fehler ist aufgetreten.</h1>
+							</div>
 							<Link
 								href="/">
 								<button className='button is-primary'>Zurück zu Start</button>
