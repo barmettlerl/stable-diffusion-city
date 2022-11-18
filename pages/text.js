@@ -30,7 +30,7 @@ const Text = () => {
 						</div>
 
 						<div className='mt-4'>
-							<input className="input is-large" type="text" placeholder="z.B Gestaltet von Nikki de Saint Phalle" onChange={(e) => setTextInput(e.target.value)} />
+							<input className="input is-large" type="text" placeholder="z.B Gestaltet von Niki de Saint Phalle" onChange={(e) => setTextInput(e.target.value)} />
 						</div>
 
 						<div className='is-flex is-justify-content-flex-end'>

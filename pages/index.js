@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <div className={`bg-img ${styles.container}`}>
         <Head>
-          <title>Sankt Traumstadt</title>
-          <meta name="description" content="Stable diffusion generator für die Stadt Sankt Gallen" />
+          <title>Sankt Traum Stadt</title>
+          <meta name="description" content="Stable diffusion generator für Sankt Gallen" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
