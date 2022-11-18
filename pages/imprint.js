@@ -1,6 +1,6 @@
 import StateContext from '../StateContext';
-import {useRouter} from 'next/router'
-import {useContext, useEffect, useMemo, useState} from 'react';
+import { useRouter } from 'next/router'
+import { useContext, useEffect, useMemo, useState } from 'react';
 import Page from '../Page'
 import Link from 'next/link'
 
@@ -17,22 +17,22 @@ const Imprint = () => {
                 <section className='section'>
                     <h4 className='subtitle'>Erstellt von</h4>
                     <address>
-                        originate GmbH<br/>
-                        Gallusstrasse 32<br/>
-                        9000 St.Gallen<br/>
+                        originate GmbH<br />
+                        Gallusstrasse 32<br />
+                        9000 St.Gallen<br />
                     </address>
-                    <p><a href='https://www.originate.ch/' target='_blank' title='originate GmbH'>www.originate.ch</a></p>
+                    <p><a href='https://www.originate.ch/' rel="noreferrer" target='_blank' title='originate GmbH'>www.originate.ch</a></p>
                 </section>
                 <section className='section'>
                     <h4 className='subtitle'>Bildquelle</h4>
                     <p>
-                        <a href='https://commons.wikimedia.org/' target='_blank' title='Wikimedia Commons'>Wikimedia Commons</a>
+                        <a href='https://commons.wikimedia.org/' rel="noreferrer" target='_blank' title='Wikimedia Commons'>Wikimedia Commons</a>
                     </p>
                 </section>
                 <section className='section'>
                     <h4 className='subtitle'>Mitwirkungsplattform<br />der Stadt St. Gallen</h4>
                     <p>
-                        <a href='https://partizipieren.stadt.sg.ch/' target='_blank' title='Partizipieren Stadt St.Gallen'>partizipieren.stadt.sg.ch</a>
+                        <a href='https://partizipieren.stadt.sg.ch/' rel="noreferrer" target='_blank' title='Partizipieren Stadt St.Gallen'>partizipieren.stadt.sg.ch</a>
                     </p>
                 </section>
                 <section className='section'>
