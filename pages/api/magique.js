@@ -10,9 +10,9 @@ const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://st-dre
 const MODEL_NAME = 'stability-ai/stable-diffusion'
 const height = 512;
 const width = 512;
-const prmt_strgth = 0.7;
+const prmt_strgth = 0.6;
 const num_interference_steps = 80;
-const guidance_scale = 17;
+const guidance_scale = 14;
 
 const translator = new deepl.Translator(NEXT_PUBLIC_DEEPL_TOKEN);
 const replicate = new Replicate({ token: NEXT_PUBLIC_REPICLATE_TOKEN });
