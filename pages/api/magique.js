@@ -8,6 +8,7 @@ const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://st-dre
 
 
 const MODEL_NAME = 'stability-ai/stable-diffusion'
+const VERSION = '8abccf52e7cba9f6e82317253f4a3549082e966db5584e92c808ece132037776'
 const height = 512;
 const width = 512;
 const prmt_strgth = 0.6;
@@ -25,7 +26,7 @@ export default function handler(req, res) {
     console.log("body.text", body.text)
 
     translator.translateText(body.text, null, 'en-US').then(({ text }) => {
-      replicate.models.get(MODEL_NAME).then((myModel) =>
+      replicate.models.get(MODEL_NAME, VERSION).then((myModel) =>
         myModel.predict({
           prompt: text,
           prompt_strength: prmt_strgth,
